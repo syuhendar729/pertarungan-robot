@@ -24,6 +24,7 @@ class Robot():
     def regen_health(self):
         # Mengembalikan HP sesuai regen yg dimiki Robot tersebut
         self.hp = self.hp + self.regen
+        print(f"{self.name} meregen HP sebanyak {self.regen} menjadi {self.hp}!")
 
     def attack_accuracy(self):
         pass
@@ -88,6 +89,7 @@ class Game():
             player.regen_health()
         elif choice == '4':
             print(f"{player.name} menyerah!")
+            enemy.hp = 0
         else:
             print("Pilihan tidak valid!")
             self.player_turn(player, enemy)
